@@ -1,0 +1,117 @@
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پایتون پلاس | Python Plus</title>
+  <!-- فونت Vazirmatn از گوگل -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root{
+      --bg-main: radial-gradient(circle at top, #2a004f, #050008 70%);
+      --card-bg: linear-gradient(180deg, rgba(40,0,80,.9), rgba(5,0,15,.9));
+      --text-main: #eee;
+      --text-soft: #d9d0ff;
+    }
+    body.light{
+      --bg-main: linear-gradient(180deg,#f5f0ff,#ffffff);
+      --card-bg: linear-gradient(180deg,#ffffff,#f1e9ff);
+      --text-main:#222;
+      --text-soft:#444;
+    }
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      transition: background .6s ease,color .6s ease;
+    }
+    header { padding: 40px 20px; display: flex; justify-content: center; }
+    .hero {
+      background: linear-gradient(135deg, #6a00ff, #2b0055);
+      border-radius: 24px;
+      max-width: 1100px; width: 100%; padding: 40px;
+      display: grid; grid-template-columns: 120px 1fr; gap: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .logo{width:120px;height:120px;border-radius:24px;background:#000;display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px rgba(138,66,255,.6);overflow:hidden}
+    .logo img{width:auto;height:100%;max-width:100%;object-fit:cover;display:block}
+    .hero-content h1{font-size:2.6rem;margin-bottom:10px;color:#fff;animation: glow 2.5s ease-in-out infinite}
+    @keyframes glow{0%,100%{text-shadow:0 0 10px #8b3dff}50%{text-shadow:0 0 25px #caa6ff}}
+    .hero-content p{font-size:1.05rem;line-height:1.9;color:#e0d7ff;margin-bottom:25px}
+    .badges{display:flex;flex-wrap:wrap;gap:12px}
+    .badge{padding:10px 18px;border-radius:999px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.15);font-size:.9rem;color:#fff;backdrop-filter:blur(6px)}
+    main{max-width:1100px;margin:60px auto 40px;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{background:var(--card-bg);border-radius:22px;padding:28px;box-shadow:0 15px 40px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);transition:.4s}
+    .card:hover{transform:translateY(-8px) scale(1.02)}
+    .card h2{font-size:1.4rem;margin-bottom:12px}
+    .card p{font-size:.95rem;line-height:1.8;color:var(--text-soft)}
+    .rubika{display:flex;justify-content:center;margin-top:20px}
+    .rubika img{width:70px;height:70px;border-radius:18px;cursor:pointer;transition:.4s;box-shadow:0 0 25px rgba(138,66,255,.7)}
+    .rubika img:hover{transform:scale(1.15) rotate(6deg)}
+    .coming{display:inline-block;margin-top:16px;padding:12px 22px;border-radius:16px;background:linear-gradient(135deg,#8b3dff,#4b00a8);color:#fff;font-weight:bold}
+    footer{text-align:center;padding:40px 20px;color:#aaa}
+    .toggle{position:fixed;top:20px;left:20px;background:#7a3cff;color:#fff;border:none;border-radius:14px;padding:10px 16px;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.4);z-index:9999}
+
+    /* 📱 موبایل */
+    @media (max-width: 768px) {
+      header { padding: 20px; }
+      .hero {grid-template-columns: 1fr;text-align: center;padding: 20px;}
+      .logo {margin: 0 auto 20px;width:90px;height:90px;}
+      .hero-content h1 { font-size:2rem; }
+      .hero-content p { font-size:.95rem; line-height:1.7; }
+      .card { padding:20px; }
+      .card h2 { font-size:1.2rem; }
+      .card p { font-size:.9rem; }
+      main { margin:30px auto; gap:16px; }
+      .toggle { padding:8px 12px; font-size:.9rem; }
+      .coming { padding:10px 18px; font-size:.9rem; display:block; margin:12px auto 0; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="toggle" onclick="document.body.classList.toggle('light')">🌙 / ☀️</button>
+
+<header>
+  <div class="hero">
+    <div class="logo">
+      <img src="https://uploadkon.ir/uploads/dd3723_252dcde05c-ba21-4eb1-9c8c-0685f01c1dc0.png" alt="Python Plus" />
+    </div>
+    <div class="hero-content">
+      <h1>پایتون پلاس</h1>
+      <p>
+        وبسایت آموزشی <strong>پایتون پلاس</strong> به مدیریت محمد لطیفی پور، با هدف ارتقا دانش برنامه‌نویسی و
+        پیشرفت هموطنان عزیز راه‌اندازی شده است. در این وبسایت و چنل روبیکایی،
+        آموزش‌های حرفه‌ای و کاربردی پایتون به‌صورت منظم منتشر خواهد شد.
+      </p>
+      <div class="badges">
+        <div class="badge">🎯 آموزش حرفه‌ای پایتون</div>
+        <div class="badge">🚀 مسیر یادگیری پیشرفته</div>
+        <div class="badge">🧠 پروژه‌محور</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <h2>درباره پایتون پلاس</h2>
+    <p>
+      پایتون پلاس فقط یک وبسایت آموزشی نیست؛ بلکه مسیری برای یادگیری عمیق، اصولی
+      و حرفه‌ای زبان برنامه‌نویسی پایتون است. تمرکز ما بر مهارت واقعی و ورود به دنیای
+      برنامه‌نویسی کاربردی می‌باشد.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>چنل روبیکایی</h2>
+    <p>
+      تمامی اطلاع‌رسانی‌ها، آموزش‌ها و ویدیوها در چنل رسمی روبیکا نیز منتشر می‌شود.
+      با کلیک روی آیکن زیر وارد چنل شوید.
+    </p>
+    <div class="rubika">
+      <a href="https://rubika.ir/PythonPlusR" target="_blank">
+        <img src="https://uploadkon.ir/uploads/14bb23_25Apps-Tarfand3-com-134-.png" alt="Rubika Channel" />
